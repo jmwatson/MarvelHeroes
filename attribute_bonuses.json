@@ -1,0 +1,61 @@
+{
+  "durability": {
+    "rank": {
+      "physical_defense_rating": 0.02,
+      "energy_defense_rating": 0.02,
+      "health_regen": 2,
+      "stun_duration_reduction": 0.01
+    },
+    "rank_per_level": {
+      "maximum_health": 3
+    }
+  },
+  "strength": {
+    "rank": {
+      "physical_damage": 0.04,
+      "thrown_object_damage": 0.04,
+      "physical_spirit_cost": 2
+    }
+  },
+  "fighting": {
+    "rank": {
+      "damage": 0.03
+    },
+    "rank_per_level": {
+      "brutal_strike_rating": 1,
+      "brutal_damage_rating": 1
+    }
+  },
+  "speed": {
+    "rank": {
+      "move_speed": 0.01,
+      "attack_speed": 0.01,
+      "movement_power_damage": 0.02,
+      "movement_spirit_cost": 0.01
+    },
+    "rank_per_level": {
+      "dodge_rating": 1,
+      "tenacity": 0.25
+    }
+  },
+  "energy": {
+    "rank": {
+      "energy_damage": 0.04,
+      "mental_damage": 0.04,
+      "energy_spirit_cost": 0.01,
+      "mental_spirit_cost": 0.01
+    }
+  },
+  "intelligence": {
+    "rank": {
+      "mental_defense_rating": 0.01,
+      "maximum_spirit": 0.5,
+      "experience_gained": 0.01,
+      "summoned_ally_damage": 0.04
+    },
+    "rank_per_level": {
+      "critical_hit_rating": 0.5,
+      "critical_damage_rating": 1.5
+    }
+  }
+}
