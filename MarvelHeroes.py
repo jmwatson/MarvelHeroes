@@ -5,6 +5,7 @@ import hashlib
 import logging
 # import math
 from mh_math import MHMath
+import power
 
 
 logging.basicConfig(level=logging.INFO)
@@ -26,6 +27,8 @@ def rocket_raccoon(powers, omegas, synergies):
     ranged_dmg_percent = 3.8
     summon_dmg_percent = 348.5
 
+    photon_pistols = power.EnergyPower(1)
+
     rockets_dmg_percent = energy_dmg_percent + ranged_dmg_percent
     return flask.jsonify({
         'character': 'Rocket Raccoon',
@@ -33,7 +36,7 @@ def rocket_raccoon(powers, omegas, synergies):
         # 'omegas': omegas,
         # 'synergies': synergies,
         'weapon_specialist': {
-            'photon_pistols_dps': MHMath.percent_to_dps(rockets_dmg_percent, MHMath.avg(range(4706, 7059)), 3.7),
+            'photon_pistols': photon_pistols.average_dps('rocket_raccoon'),
             'm78_plasma_launcher': MHMath.percent_to_dps(rockets_dmg_percent, 4435, 2),
             'big_flarkin_gun': MHMath.percent_to_dps(rockets_dmg_percent, 13827, 2),
             'shoot_and_run': MHMath.percent_to_dps(rockets_dmg_percent, MHMath.avg(range(20223, 30335)), 1),
