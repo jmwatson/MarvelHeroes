@@ -1,5 +1,6 @@
 import json
 import logging
+import os
 
 
 logging.basicConfig(level=logging.INFO)
@@ -12,5 +13,9 @@ class DB:
 
     @staticmethod
     def get_document(file_name):
-        with open(file_name) as file_handle:
-            return json.load(file_handle)
+        script_dir = os.path.dirname(__file__) + '/'
+        # logger.info(script_dir)
+        with open(script_dir + file_name) as file_handle:
+            data = json.load(file_handle)
+            file_handle.close()
+            return data
