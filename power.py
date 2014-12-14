@@ -1,7 +1,6 @@
 import logging
 from db import DB
 
-
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
