@@ -32,13 +32,13 @@ class Power:
         critical_chance = (critical_chance - brutal_chance) / 100
         brutal_chance /= 100
 
-        return (dps * base_chance) + (critical_dps * critical_chance) + (brutal_dps * brutal_chance)
+        return int(((dps * base_chance) + (critical_dps * critical_chance) + (brutal_dps * brutal_chance)) * 100) / 100.0
 
     def average_dps(self, hero_name):
         hero = DB.get_document('heroes/' + hero_name + '.json')
         dmg_bonus = hero['stats']['offensive_stats']['base_damage'] + \
                     self.dmg_rating_to_percent(hero['stats']['offensive_stats']['damage_rating'])
-        return int(self.calculate_dps(dmg_bonus, hero) * 100) / 100.0
+        return self.calculate_dps(dmg_bonus, hero)
 
     def dps(self, percent_bonus, hits_per_second):
         dps = self.average_damage * percent_bonus * hits_per_second
@@ -59,7 +59,7 @@ class PhysicalPower(Power):
         hero = DB.get_document('heroes/' + hero_name + '.json')
         dmg_bonus = hero['stats']['offensive_stats']['physical_base_damage'] + \
             self.dmg_rating_to_percent(hero['stats']['offensive_stats']['physical_damage_rating'])
-        return int(self.calculate_dps(dmg_bonus, hero) * 100) / 100.0
+        return self.calculate_dps(dmg_bonus, hero)
 
 
 class EnergyPower(Power):
@@ -67,7 +67,7 @@ class EnergyPower(Power):
         hero = DB.get_document('heroes/' + hero_name + '.json')
         dmg_bonus = hero['stats']['offensive_stats']['energy_base_damage'] + \
             self.dmg_rating_to_percent(hero['stats']['offensive_stats']['energy_damage_rating'])
-        return int(self.calculate_dps(dmg_bonus, hero) * 100) / 100.0
+        return self.calculate_dps(dmg_bonus, hero)
 
 
 class MentalPower(Power):
@@ -75,7 +75,7 @@ class MentalPower(Power):
         hero = DB.get_document('heroes/' + hero_name + '.json')
         dmg_bonus = hero['stats']['offensive_stats']['mental_base_damage'] +\
             self.dmg_rating_to_percent(hero['stats']['offensive_stats']['mental_damage_rating'])
-        return int(self.calculate_dps(dmg_bonus, hero) * 100) / 100.0
+        return self.calculate_dps(dmg_bonus, hero)
 
 
 class RangedPower(Power):
@@ -83,7 +83,7 @@ class RangedPower(Power):
         hero = DB.get_document('heroes/' + hero_name + '.json')
         dmg_bonus = hero['stats']['offensive_stats']['ranged_base_damage'] + \
             self.dmg_rating_to_percent(hero['stats']['offensive_stats']['ranged_damage_rating'])
-        return int(self.calculate_dps(dmg_bonus, hero) * 100) / 100.0
+        return self.calculate_dps(dmg_bonus, hero)
 
 
 class MeleePower(Power):
@@ -91,11 +91,11 @@ class MeleePower(Power):
         hero = DB.get_document('heroes/' + hero_name + '.json')
         dmg_bonus = hero['stats']['offensive_stats']['melee_base_damage'] + \
             self.dmg_rating_to_percent(hero['stats']['offensive_stats']['melee_damage_rating'])
-        return int(self.calculate_dps(dmg_bonus, hero) * 100) / 100.0
+        return self.calculate_dps(dmg_bonus, hero)
 
 
 class SummonedPower(Power):
     def average_dps(self, hero_name):
         hero = DB.get_document('heroes/' + hero_name + '.json')
         dmg_bonus = hero['stats']['offensive_stats']['summoned_ally_damage']
-        return int(self.calculate_dps(dmg_bonus, hero) * 100) / 100.0
+        return self.calculate_dps(dmg_bonus, hero)

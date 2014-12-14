@@ -2,5 +2,6 @@
   "name": "photon_minigun",
   "high": 4184,
   "low": 2789,
-  "hits_per_second": 8.4
+  "hits_per_second": 8.4,
+  "tags": ["energy", "ranged"]
 }

@@ -1,0 +1,7 @@
+{
+  "name": "suppression_turret",
+  "high": 6317,
+  "low": 4211,
+  "hits_per_second": 1,
+  "tags": ["energy", "summon", "area"]
+}

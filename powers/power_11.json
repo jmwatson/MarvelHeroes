@@ -1,0 +1,7 @@
+{
+  "name": "c12_stun_grenade",
+  "high": 22225,
+  "low": 14817,
+  "hits_per_second": 1.1,
+  "tags": ["energy", "ranged", "area"]
+}

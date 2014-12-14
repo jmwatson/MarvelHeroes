@@ -1,0 +1,7 @@
+{
+  "name": "gravity_mine",
+  "high": 16680,
+  "low": 11120,
+  "hits_per_second": 1.5,
+  "tags": ["energy", "ranged", "area"]
+}

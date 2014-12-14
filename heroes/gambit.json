@@ -1,22 +1,22 @@
 {
   "attributes": {
-    "durability": 3,
-    "strength": 2,
+    "durability": 4,
+    "strength": 3,
     "fighting": 6,
     "speed": 4,
-    "energy": 5,
+    "energy": 6,
     "intelligence": 3
   },
   "stats": {
     "defensive_stats": {
-      "health_regen": 360,
-      "defense_rating": 446,
-      "physical_defense_rating": 472,
-      "energy_defense_rating": 472,
-      "mental_defense_rating": 472,
-      "dodge_rating": 240,
+      "health_regen": 480,
+      "defense_rating": 0,
+      "physical_defense_rating": 0,
+      "energy_defense_rating": 0,
+      "mental_defense_rating": 0,
+      "dodge_rating": 1032,
       "tenacity": 60,
-      "projectile_deflections": 0,
+      "projectile_deflections": 0.06,
       "summoned_ally_health": 0
     },
     "offensive_stats": {
@@ -34,11 +34,11 @@
       "damage_rating": 0,
       "base_damage": 0.18,
       "physical_damage_rating": 0,
-      "physical_base_damage": 0.08,
+      "physical_base_damage": 0.12,
       "energy_damage_rating": 0,
-      "energy_base_damage": 0.20,
+      "energy_base_damage": 0.24,
       "mental_damage_rating": 0,
-      "mental_base_damage": 0.20,
+      "mental_base_damage": 0.24,
       "melee_damage_rating": 0,
       "melee_base_damage": 0,
       "ranged_damage_rating": 0,

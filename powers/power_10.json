@@ -1,0 +1,7 @@
+{
+  "name": "blaster_turret",
+  "low": 911,
+  "high": 1366,
+  "hits_per_second": 2.5,
+  "tags": ["energy", "summon"]
+}

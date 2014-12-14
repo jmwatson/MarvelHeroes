@@ -1,0 +1,63 @@
+{
+  "attributes": {
+    "durability": 7,
+    "strength": 6,
+    "fighting": 4,
+    "speed": 2,
+    "energy": 1,
+    "intelligence": 2
+  },
+  "stats": {
+    "defensive_stats": {
+      "health_regen": 840,
+      "defense_rating": 378,
+      "physical_defense_rating": 431,
+      "energy_defense_rating": 431,
+      "mental_defense_rating": 393,
+      "dodge_rating": 120,
+      "tenacity": 399,
+      "projectile_deflections": 0,
+      "summoned_ally_health": 0
+    },
+    "offensive_stats": {
+      "attack_speed": 0.02,
+      "critical_hit_rating": 60,
+      "melee_critical_hit_rating": 60,
+      "ranged_critical_hit_rating": 60,
+      "physical_critical_hit_rating": 60,
+      "energy_critical_hit_rating": 60,
+      "mental_critical_hit_rating": 60,
+      "area_critical_hit_rating": 60,
+      "critical_damage_rating": 180,
+      "brutal_strike_rating": 240,
+      "brutal_damage_rating": 720,
+      "damage_rating": 0,
+      "base_damage": 0.12,
+      "physical_damage_rating": 0,
+      "physical_base_damage": 0.24,
+      "energy_damage_rating": 0,
+      "energy_base_damage": 0.04,
+      "mental_damage_rating": 0,
+      "mental_base_damage": 0.04,
+      "melee_damage_rating": 0,
+      "melee_base_damage": 0,
+      "ranged_damage_rating": 0,
+      "ranged_base_damage": 0,
+      "summoned_ally_damage": 0.08
+    },
+    "utility_stats": {
+      "spirit_regen": 0,
+      "power_cost_change": 0,
+      "move_speed": 316,
+      "power_duration": 0,
+      "rare_item_find": 0,
+      "special_item_find": 0,
+      "credit_find": 0,
+      "bonus_xp": 0,
+      "hero_synergy_bonus_xp": 0,
+      "prestige_level": 0,
+      "omega_points_earned": 0,
+      "legendary_quests": 0
+    }
+  }
+}
