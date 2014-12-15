@@ -1,0 +1,7 @@
+{
+  "name": "photon_pistols",
+  "high": 7059,
+  "low": 4706,
+  "hits_per_second": 3.5,
+  "tags": ["energy", "ranged"]
+}

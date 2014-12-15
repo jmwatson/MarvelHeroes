@@ -1,0 +1,7 @@
+{
+  "name": "time_warp_turret",
+  "high": 48758,
+  "low": 32506,
+  "hits_per_second": 0.25,
+  "tags": ["energy", "summon", "area"]
+}

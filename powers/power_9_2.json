@@ -1,0 +1,7 @@
+{
+  "name": "my_friend_groot_charge",
+  "high": 30880,
+  "low": 20587,
+  "hits_per_second": 0.2,
+  "tags": ["summon", "physical", "area"]
+}

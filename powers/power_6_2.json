@@ -1,0 +1,7 @@
+{
+  "name": "heavy_plasma_rifle",
+  "high": 10169,
+  "low": 6780,
+  "hits_per_second": 2.1,
+  "tags": ["energy", "ranged", "area"]
+}

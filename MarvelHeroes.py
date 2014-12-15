@@ -1,12 +1,8 @@
 import flask
-from flask import Flask
+from flask import *
 from power import *
-import hashlib
-import logging
-
-
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+from hero import *
+# import hashlib
 
 app = Flask(__name__)
 
@@ -18,8 +14,19 @@ def hello_world():
     })
 
 
-@app.route('/rr/<powers>/<omegas>/<synergies>')
-def rocket_raccoon(powers, omegas, synergies):
+@app.route('/rr', methods='POST')
+def rocket_raccoon():
+    data = request.json
+    rocket = Hero('rocket_raccoon')
+    for power_id, points in data['powers']:
+        rocket.set_power_points(int(power_id), points)
+    # rocket.set_power_points(2, Hero.MAX_POWER_POINTS)
+    # rocket.set_power_points(3, Hero.MAX_POWER_POINTS)
+    # rocket.set_power_points(5, Hero.MAX_POWER_POINTS)
+    # rocket.set_power_points(8, Hero.MAX_POWER_POINTS)
+    # rocket.set_power_points(9, Hero.MAX_POWER_POINTS)
+    # rocket.set_power_points(16, Hero.MAX_POWER_POINTS)
+    app.logger.info(rocket.power)
 
     photon_pistols = EnergyPower(1)
     m78_plasma_launcher = EnergyPower(2)
@@ -89,15 +96,15 @@ def rocket_raccoon(powers, omegas, synergies):
     })
 
 
-@app.route('/rr/build/<key>')
-def rocket_raccoon_build(key):
-    return 'Rocket Raccoon key %s' % key
-
-
-def generate_build_url(params):
-    hash = hashlib.md5(''.join(params))
-    return hash.hexdigest()
-
+# @app.route('/rr/build/<key>')
+# def rocket_raccoon_build(key):
+#     return 'Rocket Raccoon key %s' % key
+#
+#
+# def generate_build_url(params):
+#     hash = hashlib.md5(''.join(params))
+#     return hash.hexdigest()
 
 if __name__ == '__main__':
+    # app.debug = True
     app.run()
