@@ -14,8 +14,8 @@ def hello_world():
     })
 
 
-@app.route('/rr')
-@app.route('/rr', methods='POST')
+@app.route('/rr/')
+@app.route('/rr/', methods='POST')
 def rocket_raccoon():
     data = request.json
     rocket = Hero('rocket_raccoon')
